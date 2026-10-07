@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Châu Á – 4,6 tỉ câu chuyện</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f2f4f1;--surface:#ffffff;--ink:#14302e;--muted:#566b68;--line:#d3ddd9;--accent:#0f766e;--accent2:#d97706;--soft:#e7efec;--ok:#15803d;--no:#c2410c;--okbg:#e3f4e8;--nobg:#fdebe1;--onAccent:#ffffff;--ring:rgba(217,119,6,.3);--disp:'Fraunces',Georgia,serif;--body:'Be Vietnam Pro',system-ui,sans-serif;--dispW:800;--emStyle:italic;--heroBg:#0c3b3a;--heroInk:#f2fbf9;--heroKick:#ffbd59;--heroAccent:#ffbd59;--heroSub:#cfe6e2;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1716;--surface:#142322;--ink:#e6f0ee;--muted:#9db3af;--line:#24403d;--accent:#2dd4bf;--accent2:#fbbf24;--soft:#1a2e2c;--ok:#4ade80;--no:#fb923c;--okbg:#163323;--nobg:#3a2316;--onAccent:#06201d;--ring:rgba(251,191,36,.3);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1716;--surface:#142322;--ink:#e6f0ee;--muted:#9db3af;--line:#24403d;--accent:#2dd4bf;--accent2:#fbbf24;--soft:#1a2e2c;--ok:#4ade80;--no:#fb923c;--okbg:#163323;--nobg:#3a2316;--onAccent:#06201d;--ring:rgba(251,191,36,.3);color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+button,input{font:inherit;color:inherit}
+h1,h2,h3{margin:0;font-family:var(--disp);line-height:1.1;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:0 48px;display:grid;gap:22px}
+.hero{position:relative;overflow:hidden;border-radius:0 0 24px 24px;background:var(--heroBg);color:var(--heroInk);min-height:260px;display:grid;align-items:end}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .in{position:relative;padding:24px clamp(16px,3vw,34px);display:grid;gap:8px;max-width:780px}
+.kick{font:700 12.5px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--heroKick)}
+.hero h1{font-size:clamp(40px,6.6vw,78px);font-weight:var(--dispW)}
+.hero h1 em{font-style:var(--emStyle);color:var(--heroAccent)}
+.hero .s{color:var(--heroSub);max-width:46em}
+.bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.prog{display:flex;align-items:center;gap:12px}
+.prog svg{width:56px;height:56px}
+.prog b{font:var(--dispW) 22px/1 var(--disp)}
+.prog small{display:block;color:var(--muted);font-size:13px}
+.stamps{display:flex;gap:6px;flex-wrap:wrap}
+.stamps i{width:30px;height:30px;border-radius:50%;border:2px dashed var(--line);display:grid;place-items:center;font:700 12px var(--body);color:var(--muted);font-style:normal}
+.stamps i.on{border:2px solid var(--accent);background:var(--accent);color:var(--onAccent)}
+nav.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+nav.tabs button{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;text-align:left;cursor:pointer;display:grid;gap:2px}
+nav.tabs button small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+nav.tabs button span{font-weight:700;line-height:1.25}
+nav.tabs button[aria-selected="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--soft)}
+nav.tabs button.done small::after{content:" ✓";color:var(--ok)}
+.st{display:grid;gap:18px}
+.sthead{display:grid;gap:8px;max-width:62em}
+.sthead h2{font-size:clamp(30px,4.4vw,46px);font-weight:var(--dispW)}
+.sthead p{color:var(--muted)}
+.know{background:var(--soft);border-left:4px solid var(--accent);border-radius:12px;padding:12px 16px;display:grid;gap:6px;font-size:15px}
+.know b{color:var(--accent)}
+.act{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(14px,2.6vw,24px);display:grid;gap:14px}
+.act.done{border-color:var(--ok)}
+.act h3{font-size:24px;font-weight:var(--dispW)}
+.act .q{font-weight:600}
+.act .tag{font:700 11px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent2)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.row .fb{flex:1 1 240px;min-width:0}
+.fb{font-weight:600}
+.fb.ok{color:var(--ok)} .fb.no{color:var(--no)}
+.ex{font-size:14px;color:var(--muted);border-left:3px solid var(--accent2);padding-left:10px}
+.btn{background:var(--surface);border:2px solid var(--ink);border-radius:999px;padding:8px 18px;cursor:pointer;font-weight:700}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--onAccent)}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.opt{text-align:left;background:var(--soft);border:2px solid transparent;border-radius:12px;padding:9px 12px;cursor:pointer}
+.opt.ok{border-color:var(--ok);background:var(--okbg)} .opt.no{border-color:var(--no);background:var(--nobg);opacity:.8}
+.opt:disabled{cursor:default}
+.ord{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:o}
+.ord li{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;background:var(--soft);border-radius:12px;padding:8px 10px;border:2px solid transparent;counter-increment:o}
+.ord li::before{content:counter(o);font:var(--dispW) 20px var(--disp);color:var(--accent);text-align:center}
+.ord li.ok{border-color:var(--ok)} .ord li.no{border-color:var(--no)}
+.ord .mv{display:flex;gap:4px}
+.ord .mv button{width:34px;height:34px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:600}
+.chip[aria-pressed="true"]{border-color:var(--accent2);box-shadow:0 0 0 3px var(--ring)}
+.chip.used{opacity:.35}
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.slot{border:2px dashed var(--line);border-radius:14px;padding:10px 12px;cursor:pointer;background:var(--soft);display:grid;gap:4px;text-align:left;min-height:72px}
+.slot b{font-weight:700}
+.slot span{color:var(--accent);font-weight:700}
+.slot.ok,.bin.ok{border-style:solid;border-color:var(--ok);background:var(--okbg)}
+.slot.no,.bin.no{border-style:solid;border-color:var(--no);background:var(--nobg)}
+.bins{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.bin{border:2px dashed var(--line);border-radius:14px;padding:10px;background:var(--soft);cursor:pointer;display:grid;gap:8px;align-content:start;min-height:120px}
+.bin h4{margin:0;font:var(--dispW) 20px/1.15 var(--disp);color:var(--accent)}
+.bin .in{display:flex;flex-wrap:wrap;gap:6px}
+.bin .in span{background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:3px 10px;font-size:14px;font-weight:600}
+.bin .in span.ok{border-color:var(--ok);color:var(--ok)} .bin .in span.no{border-color:var(--no);color:var(--no)}
+.guess input[type=range]{width:100%;accent-color:var(--accent)}
+.gval{font:var(--dispW) 40px/1 var(--disp);color:var(--accent);font-variant-numeric:tabular-nums}
+.dots{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;max-width:520px}
+.dots i{aspect-ratio:1;border-radius:50%;background:var(--line);transition:background .25s}
+.dots i.a{background:var(--accent)} .dots i.g{background:var(--accent2)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.cert{background:var(--surface);border:2px solid var(--accent2);border-radius:20px;padding:26px;display:grid;gap:10px;text-align:center;justify-items:center}
+.cert h3{font-size:38px;font-weight:var(--dispW);color:var(--accent)}
+.cert .who{font:var(--dispW) 30px var(--disp)}
+input.f{border:1.5px solid var(--line);border-radius:10px;padding:9px 12px;background:var(--surface);min-width:0}
+.guide ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+#toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);max-width:calc(100% - 32px);width:max-content;text-align:center;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:600;z-index:9}
+button:focus-visible,input:focus-visible,.slot:focus-visible,.bin:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+footer{text-align:center;font-size:12px;color:var(--muted)}
+
+@media (max-width:560px){.opts{grid-template-columns:minmax(0,1fr)} .dots{grid-template-columns:repeat(10,1fr)}}
+</style>
+</head>
+<body>
+<header class="hero"><canvas id="deco" aria-hidden="true"></canvas><div class="in">
+  <p class="kick">Lịch sử và Địa lí 7 · Phần Địa lí · Bài 6</p><h1>Châu Á – <em>4,6 tỉ</em> câu chuyện</h1><p class="s">Hơn một nửa nhân loại sống ở châu Á. Đi qua 4 chặng để khám phá dân số, nơi người ta sinh sống, những siêu đô thị và các tôn giáo lớn ra đời ở đây.</p>
+</div></header>
+<div class="wrap">
+  <div class="bar"><div class="prog"><svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="23" fill="none" stroke="var(--line)" stroke-width="6"/><circle id="ring" cx="28" cy="28" r="23" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" stroke-dasharray="144.5" stroke-dashoffset="144.5" transform="rotate(-90 28 28)"/></svg><div><b id="progTxt">0</b><small id="progSub">hoạt động đã hoàn thành</small></div></div><div class="stamps" id="stamps"></div></div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Các phần học"></nav>
+  <main id="main"></main>
+  <footer>Học liệu số Địa lí 7 · Trường THCS Võ Thị Sáu, phường An Biên, Hải Phòng · Năm học 2026 – 2027</footer>
+</div>
+<div id="toast" hidden></div>
+<script>
+const APP = {"key": "vts-dl7-b6", "lesson": "Địa lí 7 – Bài 6. Đặc điểm dân cư, xã hội châu Á", "stations": [{"label": "Chặng 1", "name": "Châu lục đông dân nhất", "intro": "Châu Á có số dân đông nhất thế giới. Dân số đang thay đổi thế nào?", "know": "<p><b>Ghi nhớ:</b> năm 2020, châu Á có khoảng <b>4 641 triệu người</b> (không tính Liên bang Nga), chiếm khoảng <b>59,5%</b> dân số thế giới. Tỉ lệ gia tăng dân số tự nhiên đang <b>giảm dần</b>. Cơ cấu dân số <b>trẻ</b> nhưng đang chuyển dịch theo hướng <b>già hoá</b>.</p>", "acts": [{"type": "guess", "tag": "Dự đoán", "title": "Cứ 100 người trên Trái Đất…", "q": "Kéo thanh trượt: em đoán trong 100 người trên thế giới, có bao nhiêu người sống ở châu Á?", "min": 10, "max": 90, "step": 1, "ans": 59.5, "tol": 5, "unit": "người / 100 người (%)", "pct": true, "legend": "<span><i style=\"background:var(--accent2)\"></i>dự đoán của em</span><span><i style=\"background:var(--accent)\"></i>thực tế (năm 2020)</span>", "ex": "Năm 2020, dân số châu Á khoảng 4 641 triệu người, chiếm khoảng 59,5% dân số thế giới – cứ 10 người thì gần 6 người sống ở châu Á."}, {"type": "mcq", "tag": "Nhận xét", "title": "Dân số đang thay đổi", "q": "Nhận xét nào đúng về dân số châu Á hiện nay?", "o": ["Cơ cấu dân số trẻ nhưng đang có xu hướng già hoá", "Cơ cấu dân số rất già ở tất cả các nước", "Số dân châu Á đang giảm nhanh", "Tỉ lệ gia tăng tự nhiên ngày càng tăng"], "a": 0, "hint": "Nhớ lại phần Ghi nhớ: cơ cấu dân số và xu hướng thay đổi.", "ex": "Châu Á vẫn có cơ cấu dân số trẻ, nhưng tỉ lệ người cao tuổi đang tăng, tỉ lệ trẻ em giảm."}, {"type": "mcq", "tag": "Vận dụng", "title": "Vì sao gia tăng dân số chậm lại?", "q": "Tỉ lệ gia tăng dân số tự nhiên ở châu Á giảm dần chủ yếu nhờ:", "o": ["nhiều nước thực hiện chính sách dân số, kinh tế – xã hội phát triển", "dân cư di cư hết sang châu lục khác", "khí hậu châu Á ngày càng lạnh", "châu Á không còn đô thị lớn"], "a": 0, "hint": "Nghĩ về chính sách của các nước như Việt Nam, Trung Quốc.", "ex": "Nhờ chính sách dân số và sự phát triển kinh tế – xã hội, tỉ lệ gia tăng tự nhiên của châu Á đã giảm."}]}, {"label": "Chặng 2", "name": "Ai sống ở đâu?", "intro": "Dân cư châu Á phân bố rất không đều. Vì sao có nơi chật chội, có nơi vắng người?", "know": "<p><b>Ghi nhớ:</b> mật độ dân số châu Á cao, gấp khoảng <b>2,5 lần</b> mức trung bình thế giới. Dân cư tập trung đông ở <b>Đông Á, Đông Nam Á, Nam Á</b> (đồng bằng, ven biển, khí hậu gió mùa); thưa thớt ở <b>Bắc Á, Trung Á, Tây Á</b> (khí hậu lạnh hoặc khô hạn, núi cao, hoang mạc).</p><p class=\"ex\" style=\"border:0;padding:0\">Học liệu dùng sơ đồ khu vực, không dùng bản đồ; giáo viên dùng lược đồ phân bố dân cư trong SGK.</p>", "acts": [{"type": "guess", "tag": "Dự đoán", "title": "Chật chội gấp mấy lần?", "q": "Mật độ dân số châu Á gấp khoảng bao nhiêu lần mức trung bình của thế giới?", "min": 1, "max": 5, "step": 0.1, "ans": 2.5, "tol": 0.3, "unit": "lần", "pct": false, "ex": "Mật độ dân số châu Á cao gấp khoảng 2,5 lần mức trung bình thế giới."}, {"type": "classify", "tag": "Phân loại", "title": "Khu vực đông dân – thưa dân", "q": "Chạm vào một khu vực, rồi chạm vào ô phù hợp.", "bins": ["Dân cư đông đúc", "Dân cư thưa thớt"], "items": [["Đông Á", 0], ["Đông Nam Á", 0], ["Nam Á", 0], ["Bắc Á", 1], ["Trung Á", 1], ["Tây Á", 1]], "ex": "Nam Á, Đông Á, Đông Nam Á là những khu vực đông dân nhất; Bắc Á, Trung Á, Tây Á dân cư thưa thớt."}, {"type": "classify", "tag": "Giải thích", "title": "Vì sao?", "q": "Xếp mỗi điều kiện vào ô phù hợp: điều kiện thu hút dân cư hay khiến dân cư thưa thớt?", "bins": ["Thu hút dân cư", "Khiến dân cư thưa thớt"], "items": [["Đồng bằng châu thổ màu mỡ", 0], ["Ven biển, giao thông thuận lợi", 0], ["Khí hậu gió mùa, nhiều nước cho trồng lúa", 0], ["Khí hậu khô hạn, nhiều hoang mạc", 1], ["Khí hậu lạnh giá quanh năm", 1], ["Núi cao, sơn nguyên hiểm trở", 1]], "ex": "Điều kiện tự nhiên (địa hình, khí hậu, nguồn nước) cùng lịch sử khai thác lãnh thổ ảnh hưởng lớn đến phân bố dân cư."}]}, {"label": "Chặng 3", "name": "Những siêu đô thị", "intro": "Châu Á có nhiều đô thị đông dân bậc nhất thế giới. Em biết chúng thuộc quốc gia nào?", "know": "<p><b>Ghi nhớ:</b> quá trình đô thị hoá ở châu Á diễn ra nhanh; nhiều đô thị lớn như Tô-ky-ô, Thượng Hải, Bắc Kinh, Mum-bai, Niu Đê-li, Gia-các-ta, Ma-ni-la, Đắc-ca… Các đô thị lớn thường nằm ở ven biển, đồng bằng, nơi giao thông thuận lợi. Việt Nam có Hà Nội, Thành phố Hồ Chí Minh.</p>", "acts": [{"type": "match", "tag": "Ghép nối", "title": "Đô thị – quốc gia", "q": "Chạm vào tên quốc gia, rồi chạm vào đô thị tương ứng.", "pairs": [["Tô-ky-ô", "Nhật Bản"], ["Thượng Hải", "Trung Quốc"], ["Mum-bai", "Ấn Độ"], ["Gia-các-ta", "In-đô-nê-xi-a"], ["Ma-ni-la", "Phi-líp-pin"], ["Đắc-ca", "Băng-la-đét"]], "ex": "Tô-ky-ô (Nhật Bản), Thượng Hải (Trung Quốc), Mum-bai (Ấn Độ), Gia-các-ta (In-đô-nê-xi-a), Ma-ni-la (Phi-líp-pin), Đắc-ca (Băng-la-đét)."}, {"type": "mcq", "tag": "Nhận xét", "title": "Đô thị mọc lên ở đâu?", "q": "Các đô thị lớn của châu Á thường tập trung ở:", "o": ["vùng ven biển, đồng bằng, giao thông thuận lợi", "vùng núi cao, sơn nguyên", "vùng hoang mạc khô hạn", "vùng lạnh giá ở Bắc Á"], "a": 0, "hint": "Đô thị cần nhiều người, nhiều hàng hoá đi lại.", "ex": "Ven biển và đồng bằng đông dân, thuận lợi giao thông, sản xuất nên hình thành nhiều đô thị lớn."}]}, {"label": "Chặng 4", "name": "Chủng tộc và tôn giáo", "intro": "Châu Á có nhiều chủng tộc cùng sinh sống và là nơi ra đời của nhiều tôn giáo lớn.", "know": "<p><b>Ghi nhớ:</b> dân cư châu Á thuộc nhiều chủng tộc, phần lớn thuộc chủng tộc <b>Môn-gô-lô-it</b>; ngoài ra có Ơ-rô-pê-ô-it và một số ít Ô-xtra-lô-it. Châu Á là nơi ra đời của <b>4 tôn giáo lớn</b>: Ấn Độ giáo, Phật giáo, Ki-tô giáo, Hồi giáo; từ châu Á, các tôn giáo lan truyền khắp thế giới.</p>", "acts": [{"type": "classify", "tag": "Phân loại", "title": "Nơi ra đời của các tôn giáo", "q": "Xếp mỗi tôn giáo vào nơi ra đời.", "bins": ["Ấn Độ", "Pa-le-xtin", "A-rập Xê-út"], "items": [["Ấn Độ giáo", 0], ["Phật giáo", 0], ["Ki-tô giáo", 1], ["Hồi giáo", 2]], "ex": "Ấn Độ giáo và Phật giáo ra đời ở Ấn Độ; Ki-tô giáo ra đời ở Pa-le-xtin; Hồi giáo ra đời ở A-rập Xê-út."}, {"type": "mcq", "tag": "Nhận biết", "title": "Chủng tộc chủ yếu", "q": "Phần lớn dân cư châu Á thuộc chủng tộc nào?", "o": ["Môn-gô-lô-it", "Ơ-rô-pê-ô-it", "Ô-xtra-lô-it", "Nê-grô-it"], "a": 0, "hint": "Đọc lại phần Ghi nhớ.", "ex": "Phần lớn dân cư châu Á thuộc chủng tộc Môn-gô-lô-it. Các chủng tộc đều bình đẳng, cùng chung sống và làm việc."}]}, {"label": "Về đích", "name": "Thử thách & chứng nhận", "intro": "8 câu hỏi củng cố. Đúng từ 6 câu để nhận giấy chứng nhận.", "quizTitle": "Thử thách Nhà dân số học nhí", "certTitle": "Nhà dân số học nhí", "passN": 6, "acts": [{}], "quiz": [{"q": "Châu lục nào có số dân đông nhất thế giới?", "o": ["Châu Á", "Châu Phi", "Châu Âu", "Châu Mỹ"], "a": 0, "ex": "Châu Á đông dân nhất, khoảng 59,5% dân số thế giới (2020)."}, {"q": "Năm 2020, dân số châu Á (không tính Liên bang Nga) khoảng:", "o": ["4,6 tỉ người", "1,4 tỉ người", "2,6 tỉ người", "7,8 tỉ người"], "a": 0, "ex": "Khoảng 4 641 triệu người ≈ 4,6 tỉ người."}, {"q": "Cơ cấu dân số châu Á hiện nay:", "o": ["trẻ nhưng đang già hoá", "rất già", "không thay đổi", "toàn trẻ em"], "a": 0, "ex": "Cơ cấu dân số trẻ, đang chuyển dịch theo hướng già hoá."}, {"q": "Khu vực nào dân cư thưa thớt?", "o": ["Bắc Á", "Đông Á", "Nam Á", "Đông Nam Á"], "a": 0, "ex": "Bắc Á khí hậu lạnh giá nên dân cư thưa thớt."}, {"q": "Mật độ dân số châu Á so với trung bình thế giới:", "o": ["cao gấp khoảng 2,5 lần", "bằng một nửa", "bằng nhau", "thấp hơn nhiều"], "a": 0, "ex": "Mật độ dân số châu Á gấp khoảng 2,5 lần mức trung bình thế giới."}, {"q": "Phật giáo ra đời ở:", "o": ["Ấn Độ", "Pa-le-xtin", "A-rập Xê-út", "Trung Quốc"], "a": 0, "ex": "Phật giáo và Ấn Độ giáo ra đời ở Ấn Độ."}, {"q": "Hồi giáo ra đời ở:", "o": ["A-rập Xê-út", "Ấn Độ", "Nhật Bản", "Pa-le-xtin"], "a": 0, "ex": "Hồi giáo ra đời ở A-rập Xê-út."}, {"q": "Đô thị Mum-bai thuộc quốc gia nào?", "o": ["Ấn Độ", "Pa-ki-xtan", "Băng-la-đét", "Thái Lan"], "a": 0, "ex": "Mum-bai là đô thị lớn của Ấn Độ."}]}], "guide": "<h3>Hướng dẫn cho thầy cô</h3>\n<p><b>Bài học:</b> Lịch sử và Địa lí 7 (bộ Kết nối tri thức với cuộc sống) – Phần Địa lí, Bài 6. Đặc điểm dân cư, xã hội châu Á.</p>\n<p><b>Yêu cầu cần đạt:</b> trình bày được đặc điểm dân cư, tôn giáo châu Á; sự phân bố dân cư và các đô thị lớn của châu Á.</p>\n<ul><li><b>Chặng 1 (8 phút):</b> cả lớp dự đoán tỉ lệ dân số trước khi xem số liệu SGK; thảo luận xu hướng già hoá.</li>\n<li><b>Chặng 2 (10 phút):</b> dùng lược đồ phân bố dân cư trong SGK song song với hoạt động phân loại; học sinh giải thích nguyên nhân.</li>\n<li><b>Chặng 3, 4 (10 phút):</b> ghép đô thị – quốc gia, phân loại tôn giáo; liên hệ Việt Nam.</li>\n<li><b>Về đích (5 phút):</b> 8 câu củng cố, học sinh đạt từ 6 câu nhận giấy chứng nhận.</li></ul>\n<p><b>Lưu ý:</b> số liệu theo SGK (năm 2020); học liệu dùng sơ đồ khu vực, không dùng bản đồ.</p><p><b>Thông tin học liệu:</b> Trường THCS Võ Thị Sáu, phường An Biên, Hải Phòng – năm học 2026 – 2027. Tác giả: ……………………………</p>\n<p>Hình vẽ trang trí tạo bằng mã nguồn; không dùng hình ảnh, lược đồ của SGK. Câu hỏi, tình huống do tác giả soạn theo nội dung SGK. Mã nguồn có sử dụng công cụ AI (Claude) hỗ trợ lập trình; nội dung đã được tác giả kiểm tra. App không thu thập thông tin cá nhân; tiến độ chỉ lưu trên máy học sinh.</p>"};
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuffle = a => { a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+let toastT; function toast(m){ const t=$('toast'); t.textContent=m; t.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>t.hidden=true,2400); }
+const KEY = APP.key; let done = {};
+try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch(e){}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch(e){} };
+const ALL = []; APP.stations.forEach((s,si) => (s.acts||[]).forEach((a,ai) => ALL.push(si+'.'+ai)));
+function complete(id){ if (!done[id]){ done[id] = 1; save(); toast('Hoàn thành! +1 dấu trên hành trình'); } refresh(); }
+function refresh(){
+  const n = ALL.filter(k => done[k]).length; $('progTxt').textContent = `${n}/${ALL.length}`;
+  $('ring').style.strokeDashoffset = 144.5 * (1 - n/ALL.length);
+  $('stamps').innerHTML = APP.stations.map((s,i) => `<i class="${(s.acts||[]).every((_,ai)=>done[i+'.'+ai])?'on':''}" title="${esc(s.name)}">${i+1}</i>`).join('');
+  document.querySelectorAll('#tabs button[data-i]').forEach(b => { if (b.dataset.i==='g') return; const i = +b.dataset.i, s = APP.stations[i]; b.classList.toggle('done', !!s.acts && s.acts.every((_,ai)=>done[i+'.'+ai])); });
+  document.querySelectorAll('.act[data-id]').forEach(a => a.classList.toggle('done', !!done[a.dataset.id]));
+}
+let cur = 0;
+function tabs(){
+  $('tabs').innerHTML = APP.stations.map((s,i) => `<button role="tab" data-i="${i}" aria-selected="${i===cur}"><small>${esc(s.label)}</small><span>${esc(s.name)}</span></button>`).join('') + `<button role="tab" data-i="g" aria-selected="${cur==='g'}"><small>Thầy cô</small><span>Hướng dẫn</span></button>`;
+  document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => { cur = b.dataset.i==='g' ? 'g' : +b.dataset.i; tabs(); show(); });
+  refresh();
+}
+function show(){
+  const m = $('main');
+  if (cur === 'g'){ m.innerHTML = `<section class="act guide">${APP.guide}<div class="row"><button class="btn" id="reset">Xóa tiến độ trên máy này</button></div></section>`; $('reset').onclick = () => { done = {}; save(); refresh(); toast('Đã xóa tiến độ.'); }; return; }
+  const s = APP.stations[cur];
+  let h = `<section class="st"><div class="sthead"><p class="tag kick" style="color:var(--accent2)">${esc(s.label)}</p><h2>${esc(s.name)}</h2><p>${s.intro}</p></div>`;
+  if (s.know) h += `<div class="know">${s.know}</div>`;
+  if (s.quiz) h += quizHtml(s);
+  else h += s.acts.map((a,ai) => `<article class="act" data-id="${cur}.${ai}"><p class="tag">${esc(a.tag||'Hoạt động')}</p><h3>${esc(a.title)}</h3><p class="q">${a.q}</p><div class="body"></div></article>`).join('');
+  m.innerHTML = h + '</section>';
+  if (s.quiz) bindQuiz(s); else s.acts.forEach((a,ai) => render(m.querySelector(`.act[data-id="${cur}.${ai}"] .body`), a, `${cur}.${ai}`));
+  refresh(); window.scrollTo({top: $('tabs').offsetTop - 10, behavior: 'smooth'});
+}
+/* ---------- CÁC DẠNG HOẠT ĐỘNG ---------- */
+function fbSet(el, ok, msg){ el.textContent = msg; el.className = 'fb ' + (ok ? 'ok' : 'no'); }
+function render(box, a, id){ ({mcq:rMcq, order:rOrder, match:rMatch, classify:rClassify, guess:rGuess})[a.type](box, a, id); }
+function rMcq(box, a, id){
+  const ord = shuffle(a.o.map((_,i)=>i));
+  box.innerHTML = `<div class="opts">${ord.map(i=>`<button class="opt" data-i="${i}">${a.o[i]}</button>`).join('')}</div><p class="ex exb" hidden></p>`;
+  box.querySelectorAll('.opt').forEach(b => b.onclick = () => { const ok = +b.dataset.i === a.a; b.classList.add(ok?'ok':'no');
+    const ex = box.querySelector('.exb'); ex.hidden = false; ex.innerHTML = (ok ? '✓ Đúng rồi. ' : '✗ Chưa đúng, em chọn lại nhé. ') + (ok ? a.ex : (a.hint||''));
+    if (ok){ box.querySelectorAll('.opt').forEach(x => x.disabled = true); complete(id); } else b.disabled = true; });
+}
+function rOrder(box, a, id){
+  let ord = shuffle(a.items.map((_,i)=>i)); if (ord.every((v,i)=>v===i)) ord.reverse();
+  const draw = () => { box.innerHTML = `<ol class="ord">${ord.map((k,i)=>`<li data-k="${k}"><span>${a.items[k]}</span><span class="mv"><button aria-label="Lên" data-u="${i}">▲</button><button aria-label="Xuống" data-d="${i}">▼</button></span></li>`).join('')}</ol><div class="row"><button class="btn pri">Kiểm tra</button><span class="fb"></span></div><p class="ex exb" hidden></p>`;
+    box.querySelectorAll('[data-u]').forEach(b => b.onclick = () => { const i=+b.dataset.u; if (i>0){ [ord[i-1],ord[i]]=[ord[i],ord[i-1]]; draw(); } });
+    box.querySelectorAll('[data-d]').forEach(b => b.onclick = () => { const i=+b.dataset.d; if (i<ord.length-1){ [ord[i+1],ord[i]]=[ord[i],ord[i+1]]; draw(); } });
+    box.querySelector('.btn.pri').onclick = () => { const r = ord.filter((v,i)=>v===i).length; box.querySelectorAll('.ord li').forEach((li,i)=>li.classList.add(ord[i]===i?'ok':'no'));
+      const ok = r === ord.length; fbSet(box.querySelector('.fb'), ok, ok ? 'Chính xác!' : `Đúng vị trí ${r}/${ord.length}. Ô viền đỏ chưa đúng.`); if (ok){ const ex = box.querySelector('.exb'); ex.hidden=false; ex.innerHTML = a.ex; complete(id); } }; };
+  draw();
+}
+function rMatch(box, a, id){
+  const L = a.pairs.map(p=>p[0]), R = shuffle(a.pairs.map(p=>p[1])), pick = {}; let sel = null, checked = false;
+  const draw = () => {
+    box.innerHTML = `<div class="chips">${R.map(r => { const used = Object.values(pick).includes(r); return `<button class="chip ${used?'used':''}" data-r="${esc(r)}" aria-pressed="${sel===r}">${r}</button>`; }).join('')}</div>
+      <div class="pairs">${L.map((l,i) => { const v = pick[i], c = checked && v ? (v===a.pairs[i][1]?'ok':'no') : ''; return `<button class="slot ${c}" data-l="${i}"><b>${l}</b><span>${v ? '→ '+v : 'chạm để đặt'}</span></button>`; }).join('')}</div>
+      <div class="row"><button class="btn pri">Kiểm tra</button><span class="fb"></span></div><p class="ex exb" hidden></p>`;
+    box.querySelectorAll('.chip').forEach(b => b.onclick = () => { const r = b.dataset.r; const k = Object.keys(pick).find(k=>pick[k]===r); if (k!==undefined) delete pick[k]; sel = sel===r ? null : r; checked = false; draw(); });
+    box.querySelectorAll('.slot').forEach(b => b.onclick = () => { const i = +b.dataset.l; if (!sel){ if (pick[i]){ delete pick[i]; checked=false; draw(); } else toast('Chọn một thẻ ở trên trước nhé.'); return; } pick[i] = sel; sel = null; checked = false; draw(); });
+    box.querySelector('.btn.pri').onclick = () => { if (Object.keys(pick).length < L.length){ fbSet(box.querySelector('.fb'), false, `Còn ${L.length-Object.keys(pick).length} ô chưa ghép.`); return; }
+      checked = true; const r = L.filter((_,i)=>pick[i]===a.pairs[i][1]).length; draw(); const ok = r===L.length; fbSet(box.querySelector('.fb'), ok, ok ? 'Ghép đúng hết!' : `Đúng ${r}/${L.length}. Chạm ô đỏ để gỡ ra, ghép lại.`); if (ok){ const ex = box.querySelector('.exb'); ex.hidden=false; ex.innerHTML=a.ex; complete(id); } };
+  };
+  draw();
+}
+function rClassify(box, a, id){
+  const items = shuffle(a.items.map((it,i)=>i)), pick = {}; let sel = null, checked = false;
+  const draw = () => {
+    const left = items.filter(i => pick[i]===undefined);
+    box.innerHTML = `<div class="chips">${left.map(i=>`<button class="chip" data-i="${i}" aria-pressed="${sel===i}">${a.items[i][0]}</button>`).join('') || '<span class="ex" style="border:0;padding:0">Đã xếp hết. Bấm Kiểm tra.</span>'}</div>
+      <div class="bins">${a.bins.map((b,bi)=>`<div class="bin" data-b="${bi}" role="button" tabindex="0"><h4>${b}</h4><div class="in">${items.filter(i=>pick[i]===bi).map(i=>`<span data-un="${i}" class="${checked?(a.items[i][1]===bi?'ok':'no'):''}">${a.items[i][0]}</span>`).join('')}</div></div>`).join('')}</div>
+      <div class="row"><button class="btn pri">Kiểm tra</button><span class="fb"></span></div><p class="ex exb" hidden></p>`;
+    box.querySelectorAll('.chip').forEach(b => b.onclick = () => { const i = +b.dataset.i; sel = sel===i ? null : i; draw(); });
+    box.querySelectorAll('.bin').forEach(b => { const put = e => { if (sel===null && e && e.target.dataset.un !== undefined){ delete pick[+e.target.dataset.un]; checked=false; draw(); return; } if (sel===null){ toast('Chọn một thẻ trước nhé.'); return; } pick[sel] = +b.dataset.b; sel = null; checked = false; draw(); };
+      b.onclick = put; b.onkeydown = e => { if (e.key==='Enter'||e.key===' '){ e.preventDefault(); put(); } }; });
+    box.querySelector('.btn.pri').onclick = () => { const n = a.items.length; if (Object.keys(pick).length < n){ fbSet(box.querySelector('.fb'), false, `Còn ${n-Object.keys(pick).length} thẻ chưa xếp.`); return; }
+      checked = true; const r = a.items.filter((it,i)=>pick[i]===it[1]).length; draw(); const ok = r===n; fbSet(box.querySelector('.fb'), ok, ok ? 'Xếp đúng hết!' : `Đúng ${r}/${n}. Chạm vào thẻ đỏ để lấy ra, xếp lại.`); if (ok){ const ex = box.querySelector('.exb'); ex.hidden=false; ex.innerHTML=a.ex; complete(id); } };
+  };
+  draw();
+}
+function rGuess(box, a, id){
+  const mid = Math.round((a.min + a.max)/2 / a.step) * a.step;
+  box.innerHTML = `<div class="guess"><div class="row"><span class="gval">${fmt(mid)}</span><span>${a.unit}</span></div><input type="range" min="${a.min}" max="${a.max}" step="${a.step}" value="${mid}" aria-label="Dự đoán">${a.pct?`<div class="dots">${'<i></i>'.repeat(100)}</div>`:''}<div class="legend">${a.legend||''}</div><div class="row"><button class="btn pri">Chốt dự đoán</button><span class="fb"></span></div><p class="ex exb" hidden></p></div>`;
+  const inp = box.querySelector('input'), val = box.querySelector('.gval'), dots = box.querySelectorAll('.dots i');
+  const paint = (v, real) => dots.forEach((d,i) => { d.className = real!==undefined ? (i < Math.round(real) ? 'a' : '') : (i < Math.round(a.pct ? v : v/a.max*100) ? 'g' : ''); });
+  const upd = () => { val.textContent = fmt(+inp.value); paint(+inp.value); }; inp.oninput = upd; upd();
+  box.querySelector('.btn.pri').onclick = () => { const v = +inp.value, ok = Math.abs(v - a.ans) <= a.tol; if (a.pct) paint(v, a.ans);
+    fbSet(box.querySelector('.fb'), ok, ok ? `Rất sát! Đáp án: ${fmt(a.ans)} ${a.unit}.` : (v < a.ans ? 'Còn thấp hơn thực tế – thử tăng lên.' : 'Cao hơn thực tế – thử giảm xuống.'));
+    if (ok){ const ex = box.querySelector('.exb'); ex.hidden=false; ex.innerHTML = a.ex; complete(id); } };
+}
+const fmt = v => Number(v).toLocaleString('vi-VN', {maximumFractionDigits: 2});
+/* ---------- THỬ THÁCH CUỐI ---------- */
+function quizHtml(s){ return `<article class="act" data-id="${cur}.0"><p class="tag">Thử thách</p><h3>${esc(s.quizTitle)}</h3><div class="row"><input class="f" id="qName" placeholder="Tên và lớp của em" maxlength="40" style="flex:1 1 220px"><button class="btn pri" id="qGo">Bắt đầu</button></div><div id="qBox"></div></article>`; }
+function bindQuiz(s){
+  $('qGo').onclick = () => { const name = $('qName').value.trim(); if (!name){ toast('Nhập tên và lớp trước nhé.'); return; }
+    const Q = shuffle(s.quiz).map(q => { const o = shuffle(q.o.map((_,i)=>i)); return {...q, ord:o}; }); let k = 0, score = 0;
+    const step = () => { if (k >= Q.length) return finish(); const q = Q[k];
+      $('qBox').innerHTML = `<p class="tag">Câu ${k+1}/${Q.length} · đúng ${score}</p><p class="q">${q.q}</p><div class="opts">${q.ord.map(i=>`<button class="opt" data-i="${i}">${q.o[i]}</button>`).join('')}</div><p class="ex exb" hidden></p><div class="row" hidden id="qNx"><button class="btn pri">${k===Q.length-1?'Xem kết quả':'Câu tiếp →'}</button></div>`;
+      $('qBox').querySelectorAll('.opt').forEach(b => b.onclick = () => { const ok = +b.dataset.i===q.a; if (ok) score++; $('qBox').querySelectorAll('.opt').forEach(x => { x.disabled = true; if (+x.dataset.i===q.a) x.classList.add('ok'); }); if (!ok) b.classList.add('no');
+        const ex = $('qBox').querySelector('.ex'); ex.hidden = false; ex.innerHTML = (ok?'✓ ':'✗ ') + q.ex; $('qNx').hidden = false; $('qNx').querySelector('button').onclick = () => { k++; step(); }; }); };
+    const finish = () => { const pass = score >= s.passN;
+      $('qBox').innerHTML = pass ? `<div class="cert"><p class="tag">Giấy chứng nhận</p><h3>${esc(s.certTitle)}</h3><p>Trao cho</p><p class="who">${esc(name)}</p><p>đã trả lời đúng <b>${score}/${Q.length}</b> câu – ${esc(APP.lesson)}</p><p class="ex" style="border:0">${new Date().toLocaleDateString('vi-VN')} · Chụp màn hình để gửi thầy cô</p></div>`
+        : `<p class="fb no">Em đúng ${score}/${Q.length} câu. Cần ít nhất ${s.passN} câu để nhận giấy chứng nhận – ôn lại các phần rồi thử lần nữa nhé!</p><button class="btn pri" id="qAgain">Làm lại</button>`;
+      if (pass) complete(cur+'.0'); else $('qAgain').onclick = () => $('qGo').click(); };
+    step(); };
+}
+/* ---------- TRANG TRÍ ---------- */
+const deco = $('deco'), dx = deco.getContext('2d');
+function drawDeco(){ const d = Math.min(2, devicePixelRatio||1), W = deco.clientWidth, H = deco.clientHeight; deco.width = W*d; deco.height = H*d; dx.setTransform(d,0,0,d,0,0); (APP_DECO)(dx, W, H, ALL.filter(k=>done[k]).length/ALL.length); }
+const APP_DECO = function(x,W,H,p){ const g=x.createLinearGradient(0,0,W,H); g.addColorStop(0,'#0c3b3a'); g.addColorStop(1,'#13575a'); x.fillStyle=g; x.fillRect(0,0,W,H);
+ let s=17; const R=()=>(s=(s*16807)%2147483647)/2147483647;
+ for(let i=0;i<900;i++){ const cx=W*(.35+.65*Math.pow(R(),.6)), cy=H*R(); const dense=Math.exp(-((cx/W-.75)**2*6+(cy/H-.55)**2*5)); if(R()>dense*1.15+.08) continue;
+  x.fillStyle = R()<.12+p*.5 ? 'rgba(255,189,89,.95)' : 'rgba(170,230,215,.45)'; x.beginPath(); x.arc(cx,cy,1.6+R()*1.6,0,7); x.fill(); }
+ const sh=x.createLinearGradient(0,0,Math.min(W,820),0); sh.addColorStop(0,'rgba(8,40,40,.92)'); sh.addColorStop(.6,'rgba(8,40,40,.5)'); sh.addColorStop(1,'rgba(8,40,40,0)'); x.fillStyle=sh; x.fillRect(0,0,W,H); };
+addEventListener('resize', drawDeco);
+const _refresh = refresh; refresh = function(){ _refresh(); drawDeco(); };
+tabs(); show();
+</script>
+</body>
+</html>
